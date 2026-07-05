@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aash.dev — Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="banner">
+
+
+        <!-- NAV -->
+        <nav id="navbar">
+            <a href="#hero" class="nav-logo">Aash<span>.dev</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Hire me</a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about" onclick="closeMobile()">About</a>
+            <a href="#skills" onclick="closeMobile()">Skills</a>
+            <a href="#services" onclick="closeMobile()">Services</a>
+            <a href="#projects" onclick="closeMobile()">Projects</a>
+            <a href="#contact" onclick="closeMobile()">Contact</a>
+        </div>
+
+        <!--HERO -->
+        <section id="hero">
+            <div class="hero-left">
+                <div class="hero-tag"><span class="dot"></span> Available for freelance work</div>
+                <h1>
+                    Hi, I'm<br>
+                    <span class="name">Hasidh</span><br>
+                    <span class="sub" id="typingText"></span><span class="type-cursor"></span>
+                </h1>
+                <p class="hero-desc">
+                    Software engineering student &amp; freelance web developer from Sri Lanka.
+                    I build clean, fast, and beautiful websites using HTML, CSS, JavaScript, Python, PHP and more.
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn-primary">View my work →</a>
+                    <a href="#contact" class="btn-ghost">Let's talk</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="snum">5+</span><span class="slabel">Languages</span></div>
+                    <div class="stat"><span class="snum">20</span><span class="slabel">Years old</span></div>
+                    <div class="stat"><span class="snum">100%</span><span class="slabel">Dedicated</span></div>
+                </div>
+            </div>
+
+            <div class="hero-right">
+                <div class="profile-wrapper">
+                    <img src="WhatsApp Image 2026-06-07 at 13.36.02.jpeg" alt="Hasidh" class="profile-img"
+                        id="profileImg"
+                        onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';" />
+                    <div class="profile-placeholder" id="profilePlaceholder">
+
+                    </div>
+                    <div class="profile-ring"></div>
+                    <div class="profile-ring-2"></div>
+                    <div class="profile-badge">Software Engineer</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ ABOUT ═══════════ -->
+        <section id="about">
+            <div class="section-label">About me</div>
+            <div class="about-grid">
+                <div class="about-text fade-up">
+                    <h2>Student. Developer.<br>Problem <span style="color:var(--accent)">Solver.</span></h2>
+                    <p>I'm <strong>Nihmathullah Mohammed Hasidh</strong>, a 20-year-old software engineering student
+                        based
+                        in Sri Lanka. I'm passionate about building web experiences that are fast, clean, and enjoyable
+                        to
+                        use.</p>
+                    <p>I combine solid technical skills with strong communication — so clients always know what's
+                        happening
+                        with their project. I deliver on time, write clean code, and genuinely care about the end
+                        result.
+                    </p>
+                    <a href="#contact" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Work with me
+                        →</a>
+                </div>
+                <div class="about-cards fade-up delay-1">
+                    <div class="acard">
+                        <div class="acard-icon">🎓</div>
+                        <div>
+                            <h4>Education</h4>
+                            <p>Software Engineering (Currently studying)</p>
+                        </div>
+                    </div>
+                    <div class="acard">
+                        <div class="acard-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Sri Lanka — Remote worldwide</p>
+                        </div>
+                    </div>
+                    <div class="acard">
+                        <div class="acard-icon">💬</div>
+                        <div>
+                            <h4>Communication</h4>
+                            <p>Strong communicator, clear updates always</p>
+                        </div>
+                    </div>
+                    <div class="acard">
+                        <div class="acard-icon">🚀</div>
+                        <div>
+                            <h4>Work Style</h4>
+                            <p>Fast delivery, clean code, client-first mindset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SKILLS ═══════════ -->
+        <section id="skills">
+            <div class="section-label">What I know</div>
+            <h2 class="section-title fade-up">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-up">
+                    <div class="skill-top"><span class="skill-icon">🌐</span><span class="skill-name">HTML5</span><span
+                            class="skill-pct">90%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up delay-1">
+                    <div class="skill-top"><span class="skill-icon">🎨</span><span class="skill-name">CSS3</span><span
+                            class="skill-pct">90%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="90"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up delay-2">
+                    <div class="skill-top"><span class="skill-icon">⚡</span><span
+                            class="skill-name">JavaScript</span><span class="skill-pct">80%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-top"><span class="skill-icon">🐍</span><span class="skill-name">Python</span><span
+                            class="skill-pct">80%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up delay-1">
+                    <div class="skill-top"><span class="skill-icon">🐘</span><span class="skill-name">PHP</span><span
+                            class="skill-pct">80%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="80"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up delay-2">
+                    <div class="skill-top"><span class="skill-icon">⚙️</span><span class="skill-name">C / C#</span><span
+                            class="skill-pct">70%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="70"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up">
+                    <div class="skill-top"><span class="skill-icon">🐙</span><span class="skill-name">GitHub</span><span
+                            class="skill-pct">75%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="75"></div>
+                    </div>
+                </div>
+                <div class="skill-card fade-up delay-1">
+                    <div class="skill-top"><span class="skill-icon">📱</span><span class="skill-name">Responsive
+                            Design</span><span class="skill-pct">85%</span></div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" data-w="85"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ SERVICES ═══════════ -->
+        <section id="services">
+            <div class="section-label">What I offer</div>
+            <h2 class="section-title fade-up">Services</h2>
+            <div class="services-grid">
+                <div class="svc-card fade-up">
+                    <div class="svc-badge">Most popular</div>
+                    <div class="svc-icon">🖥️</div>
+                    <h3>Landing Page</h3>
+                    <p>Beautiful, fast, mobile-friendly single page that turns visitors into customers.</p>
+                    <ul class="svc-list">
+                        <li>Responsive design</li>
+                        <li>Contact form</li>
+                        <li>Fast loading</li>
+                        <li>2 revisions</li>
+                    </ul>
+                    <div class="svc-price">$20 <span>/ page</span></div>
+                </div>
+                <div class="svc-card featured fade-up delay-1">
+                    <div class="svc-badge">Best value</div>
+                    <div class="svc-icon">🏢</div>
+                    <h3>Business Website</h3>
+                    <p>Full multi-page website with all sections your business needs to look professional.</p>
+                    <ul class="svc-list">
+                        <li>Up to 5 pages</li>
+                        <li>Mobile responsive</li>
+                        <li>SEO basics</li>
+                        <li>3 revisions</li>
+                    </ul>
+                    <div class="svc-price">$100 <span>/ project</span></div>
+                </div>
+                <div class="svc-card fade-up delay-2">
+                    <div class="svc-badge">Personal</div>
+                    <div class="svc-icon">💼</div>
+                    <h3>Portfolio Site</h3>
+                    <p>Showcase your work with a stunning personal portfolio that impresses clients.</p>
+                    <ul class="svc-list">
+                        <li>Custom design</li>
+                        <li>Animations</li>
+                        <li>Project gallery</li>
+                        <li>2 revisions</li>
+                    </ul>
+                    <div class="svc-price">$10 <span>/ project</span></div>
+                </div>
+                <div class="svc-card fade-up delay-3">
+                    <div class="svc-badge">Quick fix</div>
+                    <div class="svc-icon">🔧</div>
+                    <h3>Bug Fixing</h3>
+                    <p>Something broken on your existing site? I'll fix HTML, CSS or JS issues fast.</p>
+                    <ul class="svc-list">
+                        <li>Fast turnaround</li>
+                        <li>Clean fix</li>
+                        <li>Code explanation</li>
+                        <li>24hr delivery</li>
+                    </ul>
+                    <div class="svc-price">$10 <span>/ fix</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ PROJECTS ═══════════ -->
+        <section id="projects">
+            <div class="section-label">My work</div>
+            <h2 class="section-title fade-up">Projects</h2>
+            <div class="projects-grid">
+                <div class="proj-card fade-up">
+                    <div class="proj-img p1"><img src="" alt="Project 1" onerror="this.style.display='none'" /></div>
+                    <div class="proj-body">
+                        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <h3>Restaurant Landing Page</h3>
+                        <p>Responsive landing page with menu section, gallery, and booking form.</p>
+                        <a href="#" class="proj-link">View project →</a>
+                    </div>
+                </div>
+                <div class="proj-card fade-up delay-1">
+                    <div class="proj-img p2"><img src="images/project2.jpg" alt="Project 2"
+                            onerror="this.style.display='none'" /></div>
+                    <div class="proj-body">
+                        <div class="proj-tags"><span>Python</span><span>HTML</span><span>CSS</span></div>
+                        <h3>Python Web App</h3>
+                        <p>A dynamic web application built with Python backend and clean frontend.</p>
+                        <a href="#" class="proj-link">View project →</a>
+                    </div>
+                </div>
+                <div class="proj-card fade-up delay-2">
+                    <div class="proj-img p3"><img src="images/project3.jpg" alt="Project 3"
+                            onerror="this.style.display='none'" /></div>
+                    <div class="proj-body">
+                        <div class="proj-tags"><span>PHP</span><span>HTML</span><span>CSS</span></div>
+                        <h3>PHP Business Site</h3>
+                        <p>Multi-page business website with PHP contact form and dynamic content.</p>
+                        <a href="#" class="proj-link">View project →</a>
+                    </div>
+                </div>
+                <div class="proj-card fade-up">
+                    <div class="proj-img p4"><img src="images/project4.jpg" alt="Project 4"
+                            onerror="this.style.display='none'" /></div>
+                    <div class="proj-body">
+                        <div class="proj-tags"><span>C#</span><span>GitHub</span></div>
+                        <h3>C# Console App</h3>
+                        <p>A C# application with clean logic, version controlled on GitHub.</p>
+                        <a href="#" class="proj-link">View on GitHub →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════ CONTACT ═══════════ -->
+        <section id="contact">
+            <div class="section-label">Get in touch</div>
+            <h2 class="section-title fade-up">Let's Build Something Together</h2>
+            <p class="contact-sub fade-up">Have a project? I'd love to hear about it. I reply within 24 hours.</p>
+            <div class="contact-grid">
+                <div class="contact-info fade-up">
+                    <div class="cinfo-card"><span class="cinfo-icon">✉️</span>
+                        <div>
+                            <h4>Email</h4><a href="mailto:mohammedaashid1@gmail.com">mohammedaashid1@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="cinfo-card"><span class="cinfo-icon">🛒</span>
+                        <div>
+                            <h4>Fiverr</h4><a href="https://www.fiverr.com/aashidh"
+                                target="_blank">fiverr.com/aashidh</a>
+                        </div>
+                    </div>
+                    <div class="cinfo-card"><span class="cinfo-icon">🐙</span>
+                        <div>
+                            <h4>GitHub</h4><a href="https://github.com/hasidhnihmathullah"
+                                target="_blank">github.com/hasidhnihmathullah</a>
+                        </div>
+                    </div>
+                    <div class="cinfo-card"><span class="cinfo-icon">💼</span>
+                        <div>
+                            <h4>LinkedIn</h4><a href="https://www.linkedin.com/in/hasidh-nihmathullah-09556641a"
+                                target="_blank">linkedin.com/in/hasidh-nihmathullah-09556641a</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form sends to PHP → saves in MySQL aashid-dev database -->
+                <form class="contact-form fade-up delay-1" id="contactForm">
+                    <div class="form-row">
+                        <div class="input-wrap">
+                            <input type="text" name="name" id="fname" placeholder="Enter Your Name " required />
+                            <label for="fname">Your Name</label>
+                        </div>
+                        <div class="input-wrap">
+                            <input type="email" name="email" id="femail" placeholder=" Enter Your Email " required />
+                            <label for="femail">Your Email</label>
+                        </div>
+                    </div>
+                    <div class="input-wrap">
+                        <input type="text" name="subject" id="fsubject" placeholder=" Enter Your Subject " />
+                        <label for="fsubject">Subject (e.g. I need a landing page)</label>
+                    </div>
+                    <div class="input-wrap">
+                        <textarea name="message" id="fmessage" placeholder=" Enter Your Message " required></textarea>
+                        <label for="fmessage">Tell me about your project...</label>
+                    </div>
+                    <button type="submit" id="submitBtn">
+                        <span id="btnText">Send message →</span>
+                        <span id="btnLoader" style="display:none"><span class="btn-spinner"></span> Sending...</span>
+                    </button>
+                    <div id="formMsg" class="form-msg"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-inner">
+                <span class="footer-logo">Aash<span>.dev</span></span>
+                <p>© 2025 Nihmathullah Mohammed Hasidh. Built with HTML, CSS, JS &amp; PHP.</p>
+                <div class="footer-links">
+                    <a href="#hero">Top ↑</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+    </div>
+    </footer>
+
+    <!-- Scroll progress bar -->
+    <div id="scrollBar"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
