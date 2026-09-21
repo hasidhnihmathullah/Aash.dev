@@ -4,381 +4,911 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aash.dev — Developer</title>
+    <title>Hasidh Nihmathullah — Junior Software Developer</title>
+    <link rel="icon" type="image/jpeg" href="Favi icon.jpeg">
     <link rel="stylesheet" href="style.css" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
         rel="stylesheet" />
 </head>
 
 <body>
-    <div class="banner">
 
+    <div id="scrollBar"></div>
 
-        <!-- NAV -->
-        <nav id="navbar">
-            <a href="#hero" class="nav-logo">Aash<span>.dev</span></a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Hire me</a>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
+    <!-- WHATSAPP FLOAT -->
+    <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20hire%20you."
+        target="_blank" class="whatsapp-float" title="Chat on WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span>WhatsApp</span>
+    </a>
 
-        <!-- Mobile menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="#about" onclick="closeMobile()">About</a>
-            <a href="#skills" onclick="closeMobile()">Skills</a>
-            <a href="#services" onclick="closeMobile()">Services</a>
-            <a href="#projects" onclick="closeMobile()">Projects</a>
-            <a href="#contact" onclick="closeMobile()">Contact</a>
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Hasidh<span> Nihmathullah</span></div>
+            <div class="loader-bar-wrap">
+                <div class="loader-bar" id="loaderBar"></div>
+            </div>
+            <div class="loader-pct" id="loaderPct">0%</div>
         </div>
+    </div>
 
-        <!--HERO -->
-        <section id="hero">
-            <div class="hero-left">
-                <div class="hero-tag"><span class="dot"></span> Available for freelance work</div>
-                <h1>
-                    Hi, I'm<br>
-                    <span class="name">Hasidh</span><br>
-                    <span class="sub" id="typingText"></span><span class="type-cursor"></span>
-                </h1>
-                <p class="hero-desc">
-                    Software engineering student &amp; freelance web developer from Sri Lanka.
-                    I build clean, fast, and beautiful websites using HTML, CSS, JavaScript, Python, PHP and more.
-                </p>
-                <div class="hero-btns">
-                    <a href="#projects" class="btn-primary">View my work →</a>
-                    <a href="#contact" class="btn-ghost">Let's talk</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat"><span class="snum">5+</span><span class="slabel">Languages</span></div>
-                    <div class="stat"><span class="snum">20</span><span class="slabel">Years old</span></div>
-                    <div class="stat"><span class="snum">100%</span><span class="slabel">Dedicated</span></div>
+    <!-- BG VIDEO -->
+    <!-- Main Background Video -->
+    <video autoplay loop muted playsinline id="hero-bg-video">
+        <source src="bg-video.mp4.mp4" video/mp4">
+    </video>
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="#hero" class="nav-logo">Hasidh <span>Nihmathullah</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="Hasidh Nihmathullah CV.jpg" download class="nav-cv">⬇ CV</a>
+            <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20want%20to%20hire%20you." target="_blank"
+                class="nav-wa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
+                WhatsApp
+            </a>
+            <a href="#contact" class="nav-cta">Hire me</a>
+        </div>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" onclick="closeMobile()">About</a>
+        <a href="#skills" onclick="closeMobile()">Skills</a>
+        <a href="#experience" onclick="closeMobile()">Education</a>
+        <a href="#projects" onclick="closeMobile()">Projects</a>
+        <a href="#contact" onclick="closeMobile()">Contact</a>
+        <a href="Hasidh Nihmathullah CV.png" download>⬇ Download CV</a>
+        <a href="https://wa.me/94767901679" target="_blank" class="mobile-wa">💬 WhatsApp Me</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hero-left">
+            <div class="hero-tag"><span class="dot"></span> Available for freelance work</div>
+            <h1>Hi, I'm<br><span class="name">Hasidh</span><br><span class="sub" id="typingText"></span><span
+                    class="type-cursor">|</span></h1>
+            <p class="hero-desc">HND Software Development student at ESU Kandy &amp; freelance web developer from Sri
+                Lanka. I build websites, UI/UX designs and software solutions.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary">View my work →</a>
+                <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project."
+                    target="_blank" class="btn-wa">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    WhatsApp Me
+                </a>
+                <a href="#contact" class="btn-ghost">Let's talk</a>
+            </div>
+            <div class="hero-social">
+                <a href="https://linkedin.com/in/hasidh-nihmathullah" target="_blank" class="social-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://fiverr.com/aashidh" target="_blank" class="social-btn">🛒 Fiverr</a>
+                <a href="https://github.com/hasidhnihmathullah" target="_blank" class="social-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="snum" data-count="20">0</span><span class="snum-sfx">+</span><span
+                        class="slabel">Projects</span></div>
+                <div class="stat"><span class="snum" data-count="5">0</span><span class="snum-sfx">+</span><span
+                        class="slabel">Languages</span></div>
+                <div class="stat"><span class="snum" data-count="20">0</span><span class="slabel">Years old</span></div>
+                <div class="stat"><span class="snum" data-count="100">0</span><span class="snum-sfx">%</span><span
+                        class="slabel">Dedicated</span></div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="profile-wrapper">
+                <img src="WhatsApp Image 2026-06-07 at 13.36.02.jpeg" alt="Hasidh" class="profile-img" id="profileImg"
+                    onerror="this.style.display='none';document.getElementById('pp').style.display='flex';" />
+                <div class="profile-placeholder" id="pp"><span>📷</span><small>Add photo</small></div>
+                <div class="profile-glow"></div>
+                <div class="profile-badge">HND Software Dev</div>
+                <div class="float-pill fp1">Python </div>
+                <div class="float-pill fp2">PHP </div>
+                <div class="float-pill fp3">Java </div>
+                <div class="float-pill fp4">Figma </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div><span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-label">About me</div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <h2>Student. Developer.<br>Problem <span class="accent-text">Solver.</span></h2>
+                <p>I'm <strong>Hasidh Nihmathullah</strong>, a motivated HND Software Development student at ESU Kandy.
+                    I build websites, design UIs and create real solutions for real clients — like restaurant menus and
+                    e-commerce stores.</p>
+                <p>I speak <strong>English, Tamil and Sinhala</strong>, making me great with clients worldwide. Clean
+                    code, fast delivery and client-first is my approach to every project.</p>
+                <div class="about-actions">
+                    <a href="Hasidh Nihmathullah CV.jpg" download class="btn-primary">⬇ Download CV</a>
+                    <a href="https://wa.me/94767901679?text=Hi%20Hasidh!" target="_blank" class="btn-wa"> WhatsApp</a>
                 </div>
             </div>
-
-            <div class="hero-right">
-                <div class="profile-wrapper">
-                    <img src="WhatsApp Image 2026-06-07 at 13.36.02.jpeg" alt="Hasidh" class="profile-img"
-                        id="profileImg"
-                        onerror="this.style.display='none'; document.getElementById('profilePlaceholder').style.display='flex';" />
-                    <div class="profile-placeholder" id="profilePlaceholder">
-
-                    </div>
-                    <div class="profile-ring"></div>
-                    <div class="profile-ring-2"></div>
-                    <div class="profile-badge">Software Engineer</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ═══════════ ABOUT ═══════════ -->
-        <section id="about">
-            <div class="section-label">About me</div>
-            <div class="about-grid">
-                <div class="about-text fade-up">
-                    <h2>Student. Developer.<br>Problem <span style="color:var(--accent)">Solver.</span></h2>
-                    <p>I'm <strong>Nihmathullah Mohammed Hasidh</strong>, a 20-year-old software engineering student
-                        based
-                        in Sri Lanka. I'm passionate about building web experiences that are fast, clean, and enjoyable
-                        to
-                        use.</p>
-                    <p>I combine solid technical skills with strong communication — so clients always know what's
-                        happening
-                        with their project. I deliver on time, write clean code, and genuinely care about the end
-                        result.
-                    </p>
-                    <a href="#contact" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Work with me
-                        →</a>
-                </div>
-                <div class="about-cards fade-up delay-1">
-                    <div class="acard">
-                        <div class="acard-icon">🎓</div>
+            <div class="about-right reveal delay-1">
+                <div class="info-cards">
+                    <div class="icard">
+                        <div class="icard-icon">🎓</div>
                         <div>
                             <h4>Education</h4>
-                            <p>Software Engineering (Currently studying)</p>
+                            <p>HND Software Dev — ESU Kandy (2025–present)</p>
                         </div>
                     </div>
-                    <div class="acard">
-                        <div class="acard-icon">📍</div>
+                    <div class="icard">
+                        <div class="icard-icon">📍</div>
                         <div>
                             <h4>Location</h4>
-                            <p>Sri Lanka — Remote worldwide</p>
+                            <p>Madawala Bazaar, Kandy, Sri Lanka</p>
                         </div>
                     </div>
-                    <div class="acard">
-                        <div class="acard-icon">💬</div>
+                    <div class="icard">
+                        <div class="icard-icon">📞</div>
                         <div>
-                            <h4>Communication</h4>
-                            <p>Strong communicator, clear updates always</p>
+                            <h4>Phone / WhatsApp</h4>
+                            <p><a href="https://wa.me/94767901679" target="_blank" style="color:var(--accent)">+94 767
+                                    901 679</a></p>
                         </div>
                     </div>
-                    <div class="acard">
-                        <div class="acard-icon">🚀</div>
+                    <div class="icard">
+                        <div class="icard-icon">✉️</div>
                         <div>
-                            <h4>Work Style</h4>
-                            <p>Fast delivery, clean code, client-first mindset</p>
+                            <h4>Email</h4>
+                            <p>mohammedaashid1@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="icard">
+                        <div class="icard-icon">🌐</div>
+                        <div>
+                            <h4>Languages</h4>
+                            <p>English · Tamil · Sinhala</p>
+                        </div>
+                    </div>
+                    <div class="icard">
+                        <div class="icard-icon">🎨</div>
+                        <div>
+                            <h4>Also skilled in</h4>
+                            <p>UI/UX · Graphic Design · Microsoft Office</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ═══════════ SKILLS ═══════════ -->
-        <section id="skills">
-            <div class="section-label">What I know</div>
-            <h2 class="section-title fade-up">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card fade-up">
-                    <div class="skill-top"><span class="skill-icon">🌐</span><span class="skill-name">HTML5</span><span
-                            class="skill-pct">90%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="90"></div>
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-label">What I know</div>
+        <h2 class="section-title reveal">My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="skill-top"><span>🌐</span><span class="skill-name">HTML5</span><span
+                        class="skill-pct">90%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="90"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-1">
+                <div class="skill-top"><span>🎨</span><span class="skill-name">CSS3</span><span
+                        class="skill-pct">90%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="90"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-2">
+                <div class="skill-top"><span>⚡</span><span class="skill-name">JavaScript</span><span
+                        class="skill-pct">80%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="80"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-top"><span>🐍</span><span class="skill-name">Python</span><span
+                        class="skill-pct">80%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="80"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-1">
+                <div class="skill-top"><span>🐘</span><span class="skill-name">PHP</span><span
+                        class="skill-pct">80%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="80"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-2">
+                <div class="skill-top"><span>☕</span><span class="skill-name">Java</span><span
+                        class="skill-pct">70%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="70"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-top"><span>⚙️</span><span class="skill-name">C#</span><span
+                        class="skill-pct">70%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="70"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-1">
+                <div class="skill-top"><span>🐙</span><span class="skill-name">GitHub</span><span
+                        class="skill-pct">75%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="75"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-2">
+                <div class="skill-top"><span>🎭</span><span class="skill-name">Figma / UI Design</span><span
+                        class="skill-pct">75%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="75"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="skill-top"><span>💾</span><span class="skill-name">MySQL / PHP</span><span
+                        class="skill-pct">75%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="75"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-1">
+                <div class="skill-top"><span>📱</span><span class="skill-name">Responsive Design</span><span
+                        class="skill-pct">85%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="85"></div>
+                </div>
+            </div>
+            <div class="skill-card reveal delay-2">
+                <div class="skill-top"><span>🖼️</span><span class="skill-name">Graphic Design</span><span
+                        class="skill-pct">70%</span></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-w="70"></div>
+                </div>
+            </div>
+        </div>
+        <div class="personal-skills reveal">
+            <h3>Personal Skills</h3>
+            <div class="ps-grid">
+                <div class="ps-item"><span>✅</span> Responsible &amp; Organized</div>
+                <div class="ps-item"><span>⚡</span> Quick Learner</div>
+                <div class="ps-item"><span>💬</span> Good Communication</div>
+                <div class="ps-item"><span>🤝</span> Teamwork &amp; Collaboration</div>
+                <div class="ps-item"><span>⏰</span> Time Management</div>
+                <div class="ps-item"><span>🧩</span> Problem Solving</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="experience">
+        <div class="section-label">Background</div>
+        <h2 class="section-title reveal">Education &amp; Qualifications</h2>
+        <div class="timeline-grid">
+            <div class="timeline-col reveal">
+                <h3 class="tl-heading"><span>🎓</span> Education</h3>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-date">2025 – Present</div>
+                        <h4>HND in Software Development</h4>
+                        <p>ESU Kandy, Sri Lanka</p><span class="tl-badge current">Ongoing</span>
                     </div>
                 </div>
-                <div class="skill-card fade-up delay-1">
-                    <div class="skill-top"><span class="skill-icon">🎨</span><span class="skill-name">CSS3</span><span
-                            class="skill-pct">90%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="90"></div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-date">2023 – 2024</div>
+                        <h4>G.C.E Advanced Level</h4>
+                        <p>K/Madina National School — Commerce Stream</p>
                     </div>
                 </div>
-                <div class="skill-card fade-up delay-2">
-                    <div class="skill-top"><span class="skill-icon">⚡</span><span
-                            class="skill-name">JavaScript</span><span class="skill-pct">80%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="80"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-up">
-                    <div class="skill-top"><span class="skill-icon">🐍</span><span class="skill-name">Python</span><span
-                            class="skill-pct">80%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="80"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-up delay-1">
-                    <div class="skill-top"><span class="skill-icon">🐘</span><span class="skill-name">PHP</span><span
-                            class="skill-pct">80%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="80"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-up delay-2">
-                    <div class="skill-top"><span class="skill-icon">⚙️</span><span class="skill-name">C / C#</span><span
-                            class="skill-pct">70%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="70"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-up">
-                    <div class="skill-top"><span class="skill-icon">🐙</span><span class="skill-name">GitHub</span><span
-                            class="skill-pct">75%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="75"></div>
-                    </div>
-                </div>
-                <div class="skill-card fade-up delay-1">
-                    <div class="skill-top"><span class="skill-icon">📱</span><span class="skill-name">Responsive
-                            Design</span><span class="skill-pct">85%</span></div>
-                    <div class="skill-bar">
-                        <div class="skill-fill" data-w="85"></div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <div class="tl-date">2021</div>
+                        <h4>G.C.E Ordinary Level</h4>
+                        <p>K/Madina National School</p>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- ═══════════ SERVICES ═══════════ -->
-        <section id="services">
-            <div class="section-label">What I offer</div>
-            <h2 class="section-title fade-up">Services</h2>
-            <div class="services-grid">
-                <div class="svc-card fade-up">
-                    <div class="svc-badge">Most popular</div>
-                    <div class="svc-icon">🖥️</div>
-                    <h3>Landing Page</h3>
-                    <p>Beautiful, fast, mobile-friendly single page that turns visitors into customers.</p>
-                    <ul class="svc-list">
-                        <li>Responsive design</li>
-                        <li>Contact form</li>
-                        <li>Fast loading</li>
-                        <li>2 revisions</li>
-                    </ul>
-                    <div class="svc-price">$20 <span>/ page</span></div>
+            <div class="timeline-col reveal delay-1">
+                <h3 class="tl-heading"><span>📋</span> Qualifications</h3>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <h4>HND in Software Development</h4>
+                        <p>Higher National Diploma (ongoing)</p><span class="tl-badge current">In Progress</span>
+                    </div>
                 </div>
-                <div class="svc-card featured fade-up delay-1">
-                    <div class="svc-badge">Best value</div>
-                    <div class="svc-icon">🏢</div>
-                    <h3>Business Website</h3>
-                    <p>Full multi-page website with all sections your business needs to look professional.</p>
-                    <ul class="svc-list">
-                        <li>Up to 5 pages</li>
-                        <li>Mobile responsive</li>
-                        <li>SEO basics</li>
-                        <li>3 revisions</li>
-                    </ul>
-                    <div class="svc-price">$100 <span>/ project</span></div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <h4>Diploma in English &amp; IT</h4>
+                        <p>English and Information Technology</p><span class="tl-badge done">Completed</span>
+                    </div>
                 </div>
-                <div class="svc-card fade-up delay-2">
-                    <div class="svc-badge">Personal</div>
-                    <div class="svc-icon">💼</div>
-                    <h3>Portfolio Site</h3>
-                    <p>Showcase your work with a stunning personal portfolio that impresses clients.</p>
-                    <ul class="svc-list">
-                        <li>Custom design</li>
-                        <li>Animations</li>
-                        <li>Project gallery</li>
-                        <li>2 revisions</li>
-                    </ul>
-                    <div class="svc-price">$10 <span>/ project</span></div>
+                <div class="tl-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content">
+                        <h4>Graphic Design Skills</h4>
+                        <p>Design tools and visual communication</p><span class="tl-badge done">Completed</span>
+                    </div>
                 </div>
-                <div class="svc-card fade-up delay-3">
-                    <div class="svc-badge">Quick fix</div>
-                    <div class="svc-icon">🔧</div>
-                    <h3>Bug Fixing</h3>
-                    <p>Something broken on your existing site? I'll fix HTML, CSS or JS issues fast.</p>
-                    <ul class="svc-list">
-                        <li>Fast turnaround</li>
-                        <li>Clean fix</li>
-                        <li>Code explanation</li>
-                        <li>24hr delivery</li>
-                    </ul>
-                    <div class="svc-price">$10 <span>/ fix</span></div>
+                <h3 class="tl-heading" style="margin-top:2rem"><span>❤️</span> Interests</h3>
+                <div class="interests-grid">
+                    <div class="int-item">Software Development</div>
+                    <div class="int-item">Web Development</div>
+                    <div class="int-item">🎨 Graphic Designing</div>
+                    <div class="int-item">📚 New Technologies</div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="cv-banner reveal">
+            <div class="cv-banner-left">
+                <div class="cv-icon">📄</div>
+                <div>
+                    <h3>Download My Full CV</h3>
+                    <p>Complete overview of skills, education and qualifications</p>
+                </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap">
+                <a href="Hasidh Nihmathullah CV.jpg" download class="btn-primary">⬇ Download CV</a>
+                <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20reviewed%20your%20CV%20and%20want%20to%20discuss%20an%20opportunity."
+                    target="_blank" class="btn-wa">💬 WhatsApp Me</a>
+            </div>
+        </div>
+    </section>
 
-        <!-- ═══════════ PROJECTS ═══════════ -->
-        <section id="projects">
-            <div class="section-label">My work</div>
-            <h2 class="section-title fade-up">Projects</h2>
-            <div class="projects-grid">
-                <div class="proj-card fade-up">
-                    <div class="proj-img p1"><img src="" alt="Project 1" onerror="this.style.display='none'" /></div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                        <h3>Restaurant Landing Page</h3>
-                        <p>Responsive landing page with menu section, gallery, and booking form.</p>
-                        <a href="#" class="proj-link">View project →</a>
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-label">My work</div>
+        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-sub reveal">Real projects built for real clients — hover to see details</p>
+        <div class="projects-grid">
+
+            <!-- PROJECT 1: Dopamine Infinity -->
+            <div class="proj-card reveal">
+                <div class="proj-img p-di">
+                    <img src="images/proj-dopamine.jpg" alt="Dopamine Infinity" onerror="this.style.display='none'" />
+                    <div class="proj-overlay"><a href="projects/dopamine/index.html" target="_blank"
+                            class="proj-view-btn">View Live →</a></div>
+                    <div class="proj-badge-wrap">
+                        <span class="proj-badge live">Live Project</span>
+                        <span class="proj-badge client">Real Client</span>
+                    </div>
+                    <div class="proj-img-default p-di-default">
+                        <div class="pid-icon"></div>
+                        <div class="pid-name">Dopamine Infinity</div>
+                        <div class="pid-sub">Restaurant Menu</div>
                     </div>
                 </div>
-                <div class="proj-card fade-up delay-1">
-                    <div class="proj-img p2"><img src="images/project2.jpg" alt="Project 2"
-                            onerror="this.style.display='none'" /></div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>Python</span><span>HTML</span><span>CSS</span></div>
-                        <h3>Python Web App</h3>
-                        <p>A dynamic web application built with Python backend and clean frontend.</p>
-                        <a href="#" class="proj-link">View project →</a>
-                    </div>
-                </div>
-                <div class="proj-card fade-up delay-2">
-                    <div class="proj-img p3"><img src="images/project3.jpg" alt="Project 3"
-                            onerror="this.style.display='none'" /></div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>PHP</span><span>HTML</span><span>CSS</span></div>
-                        <h3>PHP Business Site</h3>
-                        <p>Multi-page business website with PHP contact form and dynamic content.</p>
-                        <a href="#" class="proj-link">View project →</a>
-                    </div>
-                </div>
-                <div class="proj-card fade-up">
-                    <div class="proj-img p4"><img src="images/project4.jpg" alt="Project 4"
-                            onerror="this.style.display='none'" /></div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>C#</span><span>GitHub</span></div>
-                        <h3>C# Console App</h3>
-                        <p>A C# application with clean logic, version controlled on GitHub.</p>
-                        <a href="#" class="proj-link">View on GitHub →</a>
+                <div class="proj-body">
+                    <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Restaurant</span></div>
+                    <h3>Dopamine Infinity — Restaurant Menu</h3>
+                    <p>Full digital menu website for a restaurant in Chennai, India. Burgers, wings, drinks, combos with
+                        WhatsApp ordering and live pricing.</p>
+                    <div class="proj-client-note"><span class="client-icon"></span><span>Real client — No. 119, Perambur
+                            High Road, Chennai, India</span></div>
+                    <div class="proj-links">
+                        <a href="projects/dopamine/index.html" target="_blank" class="proj-link">View Live →</a>
+                        <a href="https://github.com/hasidhnihmathullah" target="_blank" class="proj-link-ghost">GitHub
+                            ↗</a>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- ═══════════ CONTACT ═══════════ -->
-        <section id="contact">
-            <div class="section-label">Get in touch</div>
-            <h2 class="section-title fade-up">Let's Build Something Together</h2>
-            <p class="contact-sub fade-up">Have a project? I'd love to hear about it. I reply within 24 hours.</p>
-            <div class="contact-grid">
-                <div class="contact-info fade-up">
-                    <div class="cinfo-card"><span class="cinfo-icon">✉️</span>
-                        <div>
-                            <h4>Email</h4><a href="mailto:mohammedaashid1@gmail.com">mohammedaashid1@gmail.com</a>
-                        </div>
+            <!-- PROJECT 2: Velvet Vogue -->
+            <div class="proj-card reveal delay-1">
+                <div class="proj-img p-vv">
+                    <img src="images/proj-Velvet.jpg" alt="Velvet Vogue" onerror="this.style.display='none'" />
+                    <div class="proj-overlay"><a href="projects/Velvet/Velvet.html" target="_blank"
+                            class="proj-view-btn">View Live →</a></div>
+                    <div class="proj-badge-wrap">
+                        <span class="proj-badge pages">Multi-Page</span>
+                        <span class="proj-badge php">PHP</span>
                     </div>
-                    <div class="cinfo-card"><span class="cinfo-icon">🛒</span>
-                        <div>
-                            <h4>Fiverr</h4><a href="https://www.fiverr.com/aashidh"
-                                target="_blank">fiverr.com/aashidh</a>
-                        </div>
+                    <div class="proj-img-default p-vv-default">
+                        <div class="pid-name">Velvet Vogue</div>
+                        <div class="pid-sub">Clothing Store</div>
                     </div>
-                    <div class="cinfo-card"><span class="cinfo-icon">🐙</span>
-                        <div>
-                            <h4>GitHub</h4><a href="https://github.com/hasidhnihmathullah"
-                                target="_blank">github.com/hasidhnihmathullah</a>
-                        </div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-tags"><span>HTML</span><span>CSS</span><span>PHP</span><span>E-Commerce</span>
                     </div>
-                    <div class="cinfo-card"><span class="cinfo-icon">💼</span>
-                        <div>
-                            <h4>LinkedIn</h4><a href="https://www.linkedin.com/in/hasidh-nihmathullah-09556641a"
-                                target="_blank">linkedin.com/in/hasidh-nihmathullah-09556641a</a>
-                        </div>
+                    <h3>Velvet Vogue — Clothing Store</h3>
+                    <p>Full clothing e-commerce website with Home, Shop, Sign In (PHP), Cart, Customer Support and Our
+                        Story pages. "Be Better Everyday" brand.</p>
+                    <div class="proj-client-note"><span class="client-icon"></span><span>6 pages: Home · Shop · Sign
+                            (PHP) · Cart · Support · Our Story</span></div>
+                    <div class="proj-links">
+                        <a href="projects/Velvet/Velvet.html" target="_blank" class="proj-link">View Live →</a>
+                        <a href="https://github.com/hasidhnihmathullah" target="_blank" class="proj-link-ghost">GitHub
+                            ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 3: Brewed & Co. Coffee Shop -->
+            <div class="proj-card reveal delay-2">
+                <div class="proj-img p-coffee">
+                    <img src="images/proj-coffee.jpg" alt="Brewed and Co Coffee Shop"
+                        onerror="this.style.display='none'" />
+                    <div class="proj-overlay"><a href="projects/coffee-shop/index.html" target="_blank"
+                            class="proj-view-btn">View Live →</a></div>
+                    <div class="proj-badge-wrap">
+                        <span class="proj-badge live">Live Project</span>
+                        <span class="proj-badge pages">Multi-Section</span>
+                    </div>
+                    <div class="proj-img-default p-coffee-default">
+                        <div class="pid-icon"></div>
+                        <div class="pid-name">Brewed &amp; Co.</div>
+                        <div class="pid-sub">Artisan Coffee Shop</div>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Restaurant</span>
+                    </div>
+                    <h3>Brewed &amp; Co. — Artisan Coffee Shop</h3>
+                    <p>Full coffee shop website with animated floating cup hero, menu filter tabs (Hot/Cold/Food), CSS
+                        marquee, testimonials, opening hours and contact form.</p>
+                    <div class="proj-client-note"><span class="client-icon">☕</span><span>Menu tabs · Testimonials ·
+                            Hours · Contact · Smooth scroll animations</span></div>
+                    <div class="proj-links">
+                        <a href="projects/coffee-shop/index.html" target="_blank" class="proj-link">View Live →</a>
+                        <a href="https://github.com/hasidhnihmathullah" target="_blank" class="proj-link-ghost">GitHub
+                            ↗</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 4: FlywaYs -->
+            <div class="proj-card reveal">
+                <div class="proj-img p-fw">
+                    <img src="images/flyways-screen2.png" alt="FlywaYs" onerror="this.style.display='none'" />
+                    <div class="proj-overlay">
+                        <button class="proj-view-btn" onclick="openFlyways()">View Case Study →</button>
+                    </div>
+
+                    <!-- Top-left badges wrapper -->
+                    <div class="proj-badge-wrap">
+                        <span class="proj-badge figma">Figma</span>
+                        <span class="proj-badge ui">UI/UX</span>
+                    </div>
+
+                    <!-- Fallback name & sub container -->
+                    <div class="proj-img-default">
+                        <div class="pid-name">FlywaYs</div>
+                        <div class="pid-sub">Air - Ticket Booking</div>
                     </div>
                 </div>
 
-                <!-- Form sends to PHP → saves in MySQL aashid-dev database -->
-                <form class="contact-form fade-up delay-1" id="contactForm">
-                    <div class="form-row">
-                        <div class="input-wrap">
-                            <input type="text" name="name" id="fname" placeholder="Enter Your Name " required />
-                            <label for="fname">Your Name</label>
-                        </div>
-                        <div class="input-wrap">
-                            <input type="email" name="email" id="femail" placeholder=" Enter Your Email " required />
-                            <label for="femail">Your Email</label>
-                        </div>
+                <div class="proj-body">
+                    <div class="proj-tags">
+                        <span class="tag-figma">Figma</span><span>UI/UX</span><span>Mobile App</span><span>8
+                            Screens</span>
                     </div>
-                    <div class="input-wrap">
-                        <input type="text" name="subject" id="fsubject" placeholder=" Enter Your Subject " />
-                        <label for="fsubject">Subject (e.g. I need a landing page)</label>
+                    <h3>FlywaYs — Airline Booking App UI</h3>
+                    <p>Complete airline ticket booking UI designed in Figma. 8 screens: splash, search, results,
+                        overview, passenger form, payment and login.</p>
+                    <div class="proj-client-note">
+                        <span class="client-icon">✈️</span>
+                        <span>8 screens · 5 user flows · Full prototype in Figma</span>
                     </div>
-                    <div class="input-wrap">
-                        <textarea name="message" id="fmessage" placeholder=" Enter Your Message " required></textarea>
-                        <label for="fmessage">Tell me about your project...</label>
+                    <div class="proj-links">
+                        <button class="proj-link btn-case" onclick="openFlyways()">Case Study →</button>
+                        <span class="proj-link-ghost">Figma ↗</span>
                     </div>
-                    <button type="submit" id="submitBtn">
-                        <span id="btnText">Send message →</span>
-                        <span id="btnLoader" style="display:none"><span class="btn-spinner"></span> Sending...</span>
-                    </button>
-                    <div id="formMsg" class="form-msg"></div>
-                </form>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <div class="footer-inner">
-                <span class="footer-logo">Aash<span>.dev</span></span>
-                <p>© 2025 Nihmathullah Mohammed Hasidh. Built with HTML, CSS, JS &amp; PHP.</p>
-                <div class="footer-links">
-                    <a href="#hero">Top ↑</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
                 </div>
             </div>
-    </div>
+
+            <!-- PROJECT 5: This Portfolio -->
+            <div class="proj-card reveal delay-1">
+                <div class="proj-img p-port">
+                    <div class="proj-overlay"><a href="#hero" class="proj-view-btn">You're here →</a></div>
+                    <div class="proj-badge-wrap"><span class="proj-badge live">PHP + MySQL</span></div>
+                    <div class="port-visual">
+                        <div class="pv-bar">
+                            <div class="pv-dot r"></div>
+                            <div class="pv-dot y"></div>
+                            <div class="pv-dot g"></div>
+                        </div>
+                        <div class="pv-lines">
+                            <div class="pv-line" style="width:70%"></div>
+                            <div class="pv-line" style="width:50%"></div>
+                            <div class="pv-line" style="width:90%"></div>
+                            <div class="pv-line" style="width:60%"></div>
+                            <div class="pv-line" style="width:40%"></div>
+                        </div>
+                        <div class="pv-label">Aash.dev</div>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span><span>PHP</span><span>MySQL</span>
+                    </div>
+                    <h3>Aash.dev — This Portfolio</h3>
+                    <p>Personal portfolio with PHP backend, MySQL database contact form, animations, loader, typing
+                        effect and WhatsApp integration.</p>
+                    <div class="proj-client-note"><span class="client-icon">💼</span><span>Connected to phpMyAdmin ·
+                            aashid-dev database</span></div>
+                    <div class="proj-links">
+                        <a href="#hero" class="proj-link">View Live →</a>
+                        <a href="https://github.com/hasidhnihmathullah" target="_blank" class="proj-link-ghost">GitHub
+                            ↗</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PROJECT: ETCP Tourism App -->
+            <div class="proj-card reveal">
+                <div class="proj-img">
+                    <!-- This loads your green splash screen screenshot as the cover photo -->
+                    <img src="projects/Tourism/Screenshot%202026-08-30%20213429.png" alt="ETCP Tourism App"
+                        onerror="this.style.display='none'" />
+
+                    <div class="proj-overlay">
+                        <a href="https://www.figma.com/design/JgcBVIiXkyiVAdIXuLaKqI/ETCP-Toursim?node-id=0-1&t=zb9NyRRHSoAnpTSc-1"
+                            target="_blank" class="proj-view-btn">View Figma →</a>
+                    </div>
+
+                    <div class="proj-badge-wrap">
+                        <span class="proj-badge figma" style="background-color: #0acf83; color: black;">Figma</span>
+                        <span class="proj-badge ui" style="background-color: #a259ff; color: white;">UI/UX</span>
+                    </div>
+
+                    <div class="proj-img-default" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                        <div class="pid-name">ETCP Tourism</div>
+                        <div class="pid-sub">Mobile App UI</div>
+                    </div>
+                </div>
+
+                <div class="proj-body">
+                    <div class="proj-tags">
+                        <span>Figma</span><span>UI/UX</span><span>Mobile App</span>
+                    </div>
+
+                    <h3>ETCP Tourism — App Design</h3>
+                    <p>A mobile application UI/UX design connecting travelers with nature trails, local eco-resorts, and
+                        hiking schedules. Complete with maps and payment flows.</p>
+
+                    <div class="proj-links">
+                        <a href="https://www.figma.com/design/JgcBVIiXkyiVAdIXuLaKqI/ETCP-Toursim?node-id=0-1&t=zb9NyRRHSoAnpTSc-1"
+                            target="_blank" class="proj-link">Interactive Figma ↗</a>
+                    </div>
+                </div>
+            </div>
+            <!-- PROJECT 6: Ferro & Vance Construction -->
+            <div class="proj-card reveal delay-2">
+                <div class="proj-img p-ferro">
+                    <img src="images/proj-ferro.jpg" alt="Ferro & Vance Construction"
+                        onerror="this.style.display='none'" />
+                    <div class="proj-overlay"><a href="projects/ferro-vance/index.html" target="_blank"
+                            class="proj-view-btn">View Live →</a></div>
+                    <div class="proj-badge-wrap">
+                        <span class="proj-badge live">Live Project</span>
+                        <span class="proj-badge pages">Corporate</span>
+                    </div>
+                    <div class="proj-img-default p-ferro-default">
+                        <div class="pid-icon"></div>
+                        <div class="pid-name">Ferro &amp; Vance</div>
+                        <div class="pid-sub">Construction Co.</div>
+                    </div>
+                </div>
+                <div class="proj-body">
+                    <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JS</span><span>Construction</span>
+                    </div>
+                    <h3>Ferro &amp; Vance — Construction Company</h3>
+                    <p>A website built for a general contracting company handling renovations, additions, and new
+                        builds. Features include a process breakdown, services grid, and an interactive quote
+                        request form.</p>
+                    <div class="proj-client-note"><span class="client-icon">🏗️</span><span>General contractor site with
+                            WhatsApp integration.</span></div>
+                    <div class="proj-links">
+                        <a href="projects/ferro-vance/index.html" target="_blank" class="proj-link">View Live →</a>
+                        <a href="https://github.com/hasidhnihmathullah" target="_blank" class="proj-link-ghost">GitHub
+                            ↗</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-label">What I offer</div>
+        <h2 class="section-title reveal">Services</h2>
+        <div class="services-grid">
+            <div class="svc-card reveal">
+                <div class="svc-badge">Most popular</div>
+                <div class="svc-icon">🖥️</div>
+                <h3>Landing Page</h3>
+                <p>Beautiful, fast, mobile-friendly single page that turns visitors into customers.</p>
+                <ul class="svc-list">
+                    <li>Responsive design</li>
+                    <li>Contact form</li>
+                    <li>Fast loading</li>
+                    <li>2 revisions</li>
+                </ul>
+                <div class="svc-price">$20 <span>/ page</span></div>
+            </div>
+            <div class="svc-card featured reveal delay-1">
+                <div class="svc-badge">Best value</div>
+                <div class="svc-icon">🏢</div>
+                <h3>Business Website</h3>
+                <p>Full multi-page website with all sections your business needs.</p>
+                <ul class="svc-list">
+                    <li>Up to 5 pages</li>
+                    <li>PHP contact form</li>
+                    <li>SEO basics</li>
+                    <li>3 revisions</li>
+                </ul>
+                <div class="svc-price">$50 <span>/ project</span></div>
+            </div>
+            <div class="svc-card reveal delay-2">
+                <div class="svc-badge">Design</div>
+                <div class="svc-icon">🎨</div>
+                <h3>UI/UX Design</h3>
+                <p>Professional app or website UI designed in Figma with full prototype.</p>
+                <ul class="svc-list">
+                    <li>Figma design</li>
+                    <li>All screens</li>
+                    <li>Prototype links</li>
+                    <li>2 revisions</li>
+                </ul>
+                <div class="svc-price">$30 <span>/ project</span></div>
+            </div>
+            <div class="svc-card reveal delay-3">
+                <div class="svc-badge">Quick fix</div>
+                <div class="svc-icon">🔧</div>
+                <h3>Bug Fixing</h3>
+                <p>Something broken on your site? I'll fix HTML, CSS or JS issues fast.</p>
+                <ul class="svc-list">
+                    <li>Fast turnaround</li>
+                    <li>Clean fix</li>
+                    <li>24hr delivery</li>
+                    <li>Code explanation</li>
+                </ul>
+                <div class="svc-price">$10 <span>/ fix</span></div>
+            </div>
+        </div>
+        <div class="fiverr-cta reveal">
+            <div class="fiverr-left">
+                <div class="fiverr-icon">🛒</div>
+                <div>
+                    <h3>Find me on Fiverr</h3>
+                    <p>Order directly, fast delivery, secure payment</p>
+                </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap">
+                <a href="https://fiverr.com/aashidh" target="_blank" class="btn-fiverr">Order on Fiverr →</a>
+                <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20want%20to%20order%20a%20project."
+                    target="_blank" class="btn-wa">💬 WhatsApp Order</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-label">Get in touch</div>
+        <h2 class="section-title reveal">Let's Build Something Together</h2>
+        <p class="contact-sub reveal">Have a project? I reply within 24 hours — or just WhatsApp me!</p>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <div class="cinfo-card"><span class="cinfo-icon">✉️</span>
+                    <div>
+                        <h4>Email</h4><a href="mailto:mohammedaashid1@gmail.com">mohammedaashid1@gmail.com</a>
+                    </div>
+                </div>
+                <div class="cinfo-card"><span class="cinfo-icon">📞</span>
+                    <div>
+                        <h4>Phone / WhatsApp</h4><a href="https://wa.me/94767901679" target="_blank">+94 767 901 679</a>
+                    </div>
+                </div>
+                <div class="cinfo-card"><span class="cinfo-icon">📍</span>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Madawala Bazaar, Kandy, Sri Lanka</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20saw%20your%20portfolio%20and%20I%20want%20to%20discuss%20a%20project."
+                    target="_blank" class="wa-cta-card">
+                    <div class="wa-cta-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg></div>
+                    <div>
+                        <div class="wa-cta-title">Chat on WhatsApp</div>
+                        <div class="wa-cta-sub">+94 767 901 679 · Usually replies in minutes</div>
+                    </div>
+                </a>
+                <div class="social-links-grid">
+                    <a href="https://linkedin.com/in/hasidh-nihmathullah" target="_blank" class="slink slink-li"><svg
+                            width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg> LinkedIn</a>
+                    <a href="https://fiverr.com/aashidh" target="_blank" class="slink slink-fv">🛒 Fiverr</a>
+                    <a href="https://github.com/hasidhnihmathullah" target="_blank" class="slink slink-gh"><svg
+                            width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg> GitHub</a>
+                    <a href="Hasidh Nihmathullah CV.jpg" download class="slink slink-cv">📄 Download CV</a>
+                </div>
+            </div>
+            <form class="contact-form reveal delay-1" id="contactForm">
+                <div class="form-row">
+                    <div class="input-wrap"><input type="text" name="name" id="fn" placeholder=" " required /><label
+                            for="fn">Your name</label></div>
+                    <div class="input-wrap"><input type="email" name="email" id="fe" placeholder=" " required /><label
+                            for="fe">Your email</label></div>
+                </div>
+                <div class="input-wrap"><input type="tel" name="phone" id="fp" placeholder=" " /><label
+                        for="fp">WhatsApp / Phone (optional)</label></div>
+                <div class="input-wrap"><input type="text" name="subject" id="fs" placeholder=" " /><label
+                        for="fs">Subject</label></div>
+                <div class="input-wrap"><textarea name="message" id="fm" placeholder=" " required></textarea><label
+                        for="fm">Tell me about your project...</label></div>
+                <button type="submit" id="submitBtn">
+                    <span id="btnText">Send message →</span>
+                    <span id="btnLoader" style="display:none"><span class="btn-spinner"></span> Sending...</span>
+                </button>
+                <div id="formMsg" class="form-msg"></div>
+                <a href="https://wa.me/94767901679?text=Hi%20Hasidh!%20I%20want%20to%20discuss%20a%20project."
+                    target="_blank" class="wa-alt">Or message me directly on WhatsApp →</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-logo">Aash<span>.dev</span></div>
+                <p>© 2025 Hasidh Nihmathullah. Built with HTML, CSS, JS &amp; PHP.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://wa.me/94767901679" target="_blank" class="footer-wa"><svg width="16" height="16"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg> WhatsApp</a>
+                <a href="https://linkedin.com/in/hasidh-nihmathullah" target="_blank">LinkedIn</a>
+                <a href="https://fiverr.com/aashidh" target="_blank">Fiverr</a>
+                <a href="https://github.com/aashdev" target="_blank">GitHub</a>
+            </div>
+            <div class="footer-links">
+                <a href="#hero">Top ↑</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Scroll progress bar -->
-    <div id="scrollBar"></div>
+    <!-- FLYWAYS MODAL -->
+    <div id="flywaysModal" class="modal-overlay" onclick="closeFlyways(event)">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeFlyways()">✕</button>
+            <div class="modal-header">
+                <div class="modal-logo">FlywaYs<span>.</span></div>
+                <div class="modal-tags"><span>Figma</span><span>UI/UX</span><span>Airline App</span><span>8
+                        Screens</span></div>
+                <p class="modal-desc">Complete airline ticket booking UI designed in Figma. Forest background, clean
+                    white cards, olive green brand colour.</p>
+            </div>
+            <div class="screens-label">All 8 Screens</div>
+            <div class="screens-grid">
+                <div class="screen-item">
+                    <div class="screen-img s1"><img src="Screenshot 2026-07-06 163533.png" alt="Splash" />
+                        <div class="screen-ph">
+                            <div class="sp-logo">FlywaYs.</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">01 — Splash</div>
+                    <p class="screen-desc">Brand logo on white</p>
+                </div>
+                <div class="screen-item">
+                    <div class="screen-img s2"><img src="Screenshot 2026-07-06 163642.png" alt="Home" />
+                        <div class="screen-ph s-dark">
+                            <div class="sp-icon"></div>
+                            <div class="sp-txt">Home</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">02 — Home Search</div>
+                    <p class="screen-desc">Round Trip / One Way / Multicity</p>
+                </div>
+                <div class="screen-item">
+                    <div class="screen-img s2"><img src="Screenshot 2026-07-06 163810.png" alt="Book" />
+                        <div class="screen-ph s-dark">
+                            <div class="sp-icon"></div>
+                            <div class="sp-txt">Booking</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">03 — Booking Form</div>
+                    <p class="screen-desc">CMB → Dubai with dates</p>
+                </div>
+                <div class="screen-item">
+                    <div class="screen-img s2"><img src="Screenshot 2026-07-06 163835.png" alt="Results" />
+                        <div class="screen-ph s-dark">
+                            <div class="sp-icon"></div>
+                            <div class="sp-txt">Results</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">04 — Flight Results</div>
+                    <p class="screen-desc">Filter + sort, price cards</p>
+                </div>
+                <div class="screen-item">
+                    <div class="screen-img s2"><img src="Screenshot 2026-07-06 163851.png" alt="Overview" />
+                        <div class="screen-ph s-dark">
+                            <div class="sp-icon"></div>
+                            <div class="sp-txt">Overview</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">05 — Flight Overview</div>
+                    <p class="screen-desc">FW-402, baggage, $450</p>
+                </div>
+                <div class="screen-item">
+                    <div class="screen-img s2"><img src="Screenshot 2026-07-06 163901.png" alt="Passenger" />
+                        <div class="screen-ph s-dark">
+                            <div class="sp-icon"></div>
+                            <div class="sp-txt">Passenger</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">06 — Passenger</div>
+                    <p class="screen-desc">Name, passport, preferences</p>
+                </div>
+                <div class="screen-item">
+                    <div class="screen-img s2"><img src="Screenshot 2026-07-06 163917.png" alt="Login" />
+                        <div class="screen-ph s-dark">
+                            <div class="sp-icon"></div>
+                            <div class="sp-txt">Login</div>
+                        </div>
+                    </div>
+                    <div class="screen-label">08 — Login</div>
+                    <p class="screen-desc">Email / password, forgot password</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://figma.com" target="_blank" class="btn-primary">View in Figma ↗</a>
+                <button class="btn-ghost" onclick="closeFlyways()">Close</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
